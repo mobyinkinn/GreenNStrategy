@@ -3,3 +3,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.market-research {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.market-research > li {
+  list-style-type: none;
+  border: 1px solid white;
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 40px 0 0;
+}
+
+.market-research > li:hover {
+  border: 1px solid limegreen;
+  background-color: limegreen;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}

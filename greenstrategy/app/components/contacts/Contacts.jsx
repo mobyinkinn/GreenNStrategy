@@ -5,7 +5,7 @@ export default function Contacts() {
   return (
     <Box>
       <Navbar />
-      <Typography>Contacts</Typography>
+      <form></form>
     </Box>
   );
 }

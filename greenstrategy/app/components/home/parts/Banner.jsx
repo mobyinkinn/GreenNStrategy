@@ -12,22 +12,22 @@ export default function Banner() {
   return (
     // <Box sx={{ width: "100%" }}>
     <Carousel showArrows={true} axis={"horizontal"}>
-      <Box>
+      <Box position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </Box>
-      <div>
+      <div position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </div>
-      <div>
+      <div position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </div>
-      <div>
+      <div position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </div>
-      <div>
+      <div position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </div>
-      <div>
+      <div position={"relative"}>
         <Image src={img} fill objectFit="contain" alt="" />
       </div>
     </Carousel>
