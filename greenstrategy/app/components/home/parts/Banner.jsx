@@ -83,7 +83,6 @@
 //   );
 // }
 
-
 // "use client";
 
 // import Slider from "react-slick";
@@ -221,9 +220,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import Slider from "react-slick";
@@ -237,6 +233,9 @@ import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import banner1 from "@/public/assets/2.jpg";
+import banner2 from "@/public/assets/3.jpg";
+import banner3 from "@/public/assets/4.jpg";
 
 export default function Banner() {
   const bannerRef = useRef();
@@ -258,7 +257,7 @@ export default function Banner() {
       scrollTrigger: {
         trigger: bannerRef.current,
         start: "top 80%",
-        end: "bottom bottom",
+        end: "center bottom",
         scrub: true,
         markers: false,
       },
@@ -281,30 +280,40 @@ export default function Banner() {
   const Images = [
     {
       id: 1,
-      src: img1,
+      src: banner1,
     },
     {
       id: 2,
-      src: img2,
+      src: banner2,
+    },
+    {
+      id: 3,
+      src: banner3,
     },
     // Add more images here if needed
   ];
 
   return (
-    <Box width={"100vw"} margin={"0 auto"} ref={bannerRef}>
+    <Box
+      width={"100vw"}
+      margin={"0 auto"}
+      ref={bannerRef}
+      backgroundColor={"black"}
+    >
       <Slider {...settings}>
         {Images.map((d) => (
           <Stack
             key={d.id}
             width={"100vw"}
-            height={"60vh"}
+            height={"100vh"}
             position={"relative"}
+            border={"none"}
           >
             <Image
               src={d.src}
               alt={`Image ${d.id}`}
               fill
-              objectFit={"cover"}
+              objectFit={"contain"}
               sizes="100vw"
             />
           </Stack>

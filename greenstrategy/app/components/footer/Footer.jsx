@@ -4,6 +4,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import logo from "@/public/assets/Green-&-Strategy.jpg";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -16,21 +18,24 @@ export default function Footer() {
       padding={"100px 70px"}
     >
       <Stack fontSize={"1.6rem"} gap={"15px"}>
-        <Box>
-          <span style={{ color: "limegreen" }}>Green</span> N Strategy
-        </Box>
+        <Image src={logo} alt="" width={150} height={100} />
+
         <Stack direction={"row"} gap={"5px"}>
           <InstagramIcon />
           <FacebookIcon />
           <XIcon />
           <LinkedInIcon />
         </Stack>
+        <Typography>All Rights Reserved.</Typography>
       </Stack>
       <Box
         sx={{ width: "1px", height: "150px", backgroundColor: "white" }}
       ></Box>
       <Stack gap={"5px"}>
-        <Typography sx={{ marginBottom: "5px", fontSize: "1.2rem" }}>
+        <Typography
+          fontWeight={"bold"}
+          sx={{ marginBottom: "5px", fontSize: "1.2rem" }}
+        >
           Our Services:{" "}
         </Typography>
         <Link href={"/"} style={{ textDecoration: "none", color: "#ddd" }}>
@@ -47,8 +52,11 @@ export default function Footer() {
         </Link>
       </Stack>
       <Stack gap={"5px"}>
-        <Typography sx={{ marginBottom: "5px", fontSize: "1.2rem" }}>
-          Useful links:{" "}
+        <Typography
+          sx={{ marginBottom: "5px", fontSize: "1.2rem" }}
+          fontWeight={"bold"}
+        >
+          Quick links:
         </Typography>
         <Link href={"/"} style={{ textDecoration: "none", color: "#ddd" }}>
           Home
@@ -67,15 +75,16 @@ export default function Footer() {
         sx={{ width: "1px", height: "150px", backgroundColor: "white" }}
       ></Box>
       <Stack gap={"15px"}>
-        <Typography color={"#ddd"}>Subscribe to our newsletter: </Typography>
+        <Typography color={"#ddd"} fontSize={"1.2rem"} fontWeight={"bold"}>
+          Subscribe to our newsletter:{" "}
+        </Typography>
         <Stack direction={"row"} gap={"10px"}>
           <input
             required
             style={{
               backgroundColor: "black",
               color: "#ddd",
-              padding: "5px 5px 0 5px",
-              fontSize: "1.2rem",
+              padding: "5px 0 5px 15px",
               height: "50px",
               outline: "none",
               borderRadius: "10px",

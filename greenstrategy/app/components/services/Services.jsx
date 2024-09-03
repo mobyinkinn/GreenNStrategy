@@ -7,8 +7,8 @@ export default function Services() {
   return (
     <Stack
       padding={{
-        xs: "40px 20px",
-        md: "50px 50px",
+        xs: "20px 20px",
+        md: "30px 50px",
       }}
       backgroundColor={"black"}
       color={"white"}

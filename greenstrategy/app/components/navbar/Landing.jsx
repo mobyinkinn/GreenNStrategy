@@ -30,7 +30,7 @@ export default function Landing({ setShowNav }) {
       scrollTrigger: {
         trigger: animeRef.current,
         start: "center 40%",
-        end: "bottom 10%",
+        end: "bottom 50%",
         scrub: true,
         // markers: true,
       },
