@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar showNav={showNav} />
       <Landing setShowNav={setShowNav} />
       <Banner />
-      <ProgressBar />
+      {/* <ProgressBar /> */}
       <Services />
       <Form />
       <Footer />
