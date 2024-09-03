@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import { useState } from "react";
-
+import logoWhite from "@/public/assets/logoWhite.png"
 const navData = [
   { name: "Services", route: "/Services" },
   { name: "Contacts", route: "/Contacts" },
@@ -50,13 +50,14 @@ export default function Navbar({ showNav = true }) {
             top: "0",
             zIndex: "30",
             paddingX: "40px",
-            height: "70px",
+            height: "80px",
             animation: `${translateOnLoad} 0.5s ease-out forwards`,
           }}
         >
-          <Link href={"/"} style={{ textDecoration: "none", color: "white" }}>
+          {/* <Link href={"/"} style={{ textDecoration: "none", color: "white" }}>
             GNS
-          </Link>
+          </Link> */}
+          <Image src={logoWhite}  width={300} style={{cursor:"pointer"}}/>
           <Stack direction={"row"}>
             {navData.map((el, i) => {
               return (
