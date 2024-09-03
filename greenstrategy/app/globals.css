@@ -105,11 +105,8 @@
   transform: scale(1.2);
 }
 
-.expanding-link > a:hover {
+.expanding-link a:hover {
   color: limegreen;
   transform: scale(1.2);
   transition: transform 0.5s ease;
-}
-.slick-slider *:focus {
-  outline: none;
 }

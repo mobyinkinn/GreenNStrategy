@@ -20,7 +20,7 @@ export default function Footer() {
       <Stack fontSize={"1.6rem"} gap={"15px"}>
         <Image src={logo} alt="" width={250} height={50} />
 
-        <Stack direction={"row"} gap={"5px"}>
+        <Stack direction={"row"} gap={"10px"}>
           <InstagramIcon className="icon" />
           <FacebookIcon className="icon" />
           <XIcon className="icon" />
