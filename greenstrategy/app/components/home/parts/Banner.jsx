@@ -17,6 +17,8 @@ export default function Banner() {
     autoplay: true,
     autoplaySpeed: 5000,
     draggable: true, // Enables dragging on desktop
+    arrows: false,
+    pauseOnHover: false,
   };
 
   const Images = [
