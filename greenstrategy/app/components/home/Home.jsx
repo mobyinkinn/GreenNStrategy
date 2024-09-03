@@ -9,6 +9,8 @@ import Services from "../services/Services";
 import ProgressBar from "./parts/ProgressBar";
 import Footer from "../footer/Footer";
 import Form from "./parts/Form";
+import Image from "next/image";
+import banner1 from "@/public/assets/1.jpg";
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
@@ -19,6 +21,9 @@ export default function Home() {
       <Banner />
       {/* <ProgressBar /> */}
       <Services />
+      <Box width={"100%"} height={"100vh"} position={"relative"}>
+        <Image src={banner1} alt="" fill objectFit="contain" sizes="100vw" />
+      </Box>
       <Form />
       <Footer />
     </Box>

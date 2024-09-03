@@ -4,7 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import logo from "@/public/assets/Green-&-Strategy.jpg";
+import logo from "@/public/assets/logo.png";
 import Image from "next/image";
 
 export default function Footer() {
@@ -18,25 +18,25 @@ export default function Footer() {
       padding={"100px 70px"}
     >
       <Stack fontSize={"1.6rem"} gap={"15px"}>
-        <Image src={logo} alt="" width={150} height={100} />
+        <Image src={logo} alt="" width={250} height={50} />
 
         <Stack direction={"row"} gap={"5px"}>
-          <InstagramIcon />
-          <FacebookIcon />
-          <XIcon />
-          <LinkedInIcon />
+          <InstagramIcon className="icon" />
+          <FacebookIcon className="icon" />
+          <XIcon className="icon" />
+          <LinkedInIcon className="icon" />
         </Stack>
         <Typography>All Rights Reserved.</Typography>
       </Stack>
       <Box
         sx={{ width: "1px", height: "150px", backgroundColor: "white" }}
       ></Box>
-      <Stack gap={"5px"}>
+      <Stack gap={"5px"} className="expanding-link" fontSize={"0.9rem"}>
         <Typography
           fontWeight={"bold"}
           sx={{ marginBottom: "5px", fontSize: "1.2rem" }}
         >
-          Our Services:{" "}
+          Services:{" "}
         </Typography>
         <Link href={"/"} style={{ textDecoration: "none", color: "#ddd" }}>
           Market Research
@@ -51,7 +51,7 @@ export default function Footer() {
           Web Development
         </Link>
       </Stack>
-      <Stack gap={"5px"}>
+      <Stack gap={"5px"} className="expanding-link" fontSize={"0.9rem"}>
         <Typography
           sx={{ marginBottom: "5px", fontSize: "1.2rem" }}
           fontWeight={"bold"}

@@ -98,3 +98,15 @@
     width: 100%;
   }
 }
+
+.icon:hover {
+  color: limegreen;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.expanding-link > a:hover {
+  color: limegreen;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+}
