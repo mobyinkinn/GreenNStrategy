@@ -14,7 +14,12 @@ export default function Services() {
       color={"white"}
     >
       <h2
-        style={{ color: "limegreen", marginBottom: "20px", fontSize: "1.7rem" }}
+        style={{
+          color: "limegreen",
+          marginBottom: "20px",
+          fontSize: "2rem",
+          textAlign: "center",
+        }}
       >
         Our Services
       </h2>

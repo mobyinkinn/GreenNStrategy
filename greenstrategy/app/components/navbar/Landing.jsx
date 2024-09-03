@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import logo from "@/public/assets/Green-&-Strategy.jpg";
 
 export default function Landing({ setShowNav }) {
   const animeRef = useRef();
@@ -27,7 +29,7 @@ export default function Landing({ setShowNav }) {
 
       scrollTrigger: {
         trigger: animeRef.current,
-        start: "top 40%",
+        start: "center 40%",
         end: "bottom 10%",
         scrub: true,
         // markers: true,
@@ -63,8 +65,9 @@ export default function Landing({ setShowNav }) {
           // gap: "5px",
         }}
       >
-        <Stack direction={"row"} sx={{ gap: "10px" }} ref={animeRef}>
-          <Typography
+        <Stack direction={"row"} sx={{ gap: "10px" }} width={"100%"}>
+          <Image src={logo} alt="" ref={animeRef} fill objectFit="cover" />
+          {/* <Typography
             sx={{
               fontSize: {
                 xs: "1.6rem",
@@ -72,6 +75,7 @@ export default function Landing({ setShowNav }) {
                 lg: "3rem",
               },
               color: "limegreen",
+              fontWeight: "bold",
             }}
           >
             Green
@@ -83,10 +87,12 @@ export default function Landing({ setShowNav }) {
                 md: "2rem",
                 lg: "3rem",
               },
+
+              fontWeight: "bold",
             }}
           >
             N Strategy
-          </Typography>
+          </Typography> */}
         </Stack>
       </Stack>
     </Stack>

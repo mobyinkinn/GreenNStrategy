@@ -30,7 +30,7 @@ export default function ServiceCard({ name, data }) {
           {data}
         </Typography>
       </Box>
-      <button className="btn-black">Book a Call</button>
+      <button className="btn-black">Learn More</button>
     </Stack>
   );
 }
