@@ -28,11 +28,19 @@
   transition: all 0.5s ease;
 }
 
+.banner-animation-delay {
+  background-color: limegreen;
+  height: 100%;
+  width: 0%;
+  animation: expandWidth 5s ease infinite forwards;
+  animation-delay: 5s;
+}
 .banner-animation {
   background-color: limegreen;
   height: 100%;
   width: 0%;
-  animation: expandWidth 5s ease infinite;
+  animation: expandWidth 5s ease infinite forwards;
+  animation-delay: 3s;
 }
 
 @keyframes expandWidth {

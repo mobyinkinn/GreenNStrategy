@@ -13,7 +13,7 @@ import Form from "./parts/Form";
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
   return (
-    <Box backgroundColor={"black"}>
+    <Box backgroundColor={"black"} sx={{ overflowX: "hidden" }}>
       <Navbar showNav={showNav} />
       <Landing setShowNav={setShowNav} />
       <Banner />
