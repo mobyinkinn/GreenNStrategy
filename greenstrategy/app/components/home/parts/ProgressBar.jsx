@@ -19,7 +19,7 @@ export default function ProgressBar() {
       >
         <Stack className="banner-animation"></Stack>
       </Stack>
-      {/* <Stack
+      <Stack
         direction={"row"}
         sx={{ justifyContent: "start" }}
         backgroundColor={"#333"}
@@ -27,7 +27,7 @@ export default function ProgressBar() {
         height={"3px"}
       >
         <Stack className="banner-animation-delay"></Stack>
-      </Stack> */}
+      </Stack>
     </Stack>
   );
 }

@@ -32,19 +32,34 @@
   background-color: limegreen;
   height: 100%;
   width: 0%;
-  animation: expandWidth 5s ease infinite forwards;
-  animation-delay: 5s;
+  animation: expandWidthDelay 10s ease infinite forwards;
+  animation-delay: 3s;
 }
 .banner-animation {
   background-color: limegreen;
   height: 100%;
   width: 0%;
-  animation: expandWidth 5s ease infinite forwards;
+  animation: expandWidth 10s ease infinite forwards;
   animation-delay: 3s;
 }
 
 @keyframes expandWidth {
   0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes expandWidthDelay {
+  0% {
+    width: 0;
+  }
+  50% {
     width: 0;
   }
   100% {

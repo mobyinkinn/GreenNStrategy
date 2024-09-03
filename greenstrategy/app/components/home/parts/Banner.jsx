@@ -25,13 +25,14 @@ export default function Banner() {
     //Defining the animations to run in tl timeline
     tl.from(bannerRef.current, {
       x: innerWidth,
+      duration: 1,
       ease: "Power1.inOut",
       scrollTrigger: {
         trigger: bannerRef.current,
         start: "top 80%",
         end: "bottom bottom",
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
   });
@@ -59,15 +60,21 @@ export default function Banner() {
   ];
 
   return (
-    <Box width={"90vw"} margin={"0 auto"} ref={bannerRef}>
+    <Box width={"100vw"} margin={"0 auto"} ref={bannerRef}>
       <Slider {...settings}>
         {Images.map((d) => (
-          <Stack key={d.id}>
+          <Stack
+            key={d.id}
+            width={"100vw"}
+            height={"60vh"}
+            position={"relative"}
+          >
             <Image
               src={d.src}
               alt={`Image ${d.id}`}
-              width={1200}
-              height={500}
+              fill
+              objectFit={"cover"}
+              sizes="100vw"
             />
           </Stack>
         ))}
