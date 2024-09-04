@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import Slider from "react-slick";
@@ -150,14 +149,12 @@
 //   );
 // }
 
-
-
 "use client";
 
-import Slider from "react-slick";
 import img1 from "@/public/assets/tempBanner.jpg";
 import img2 from "@/public/assets/image.png";
 import Image from "next/image";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Stack } from "@mui/material";
@@ -230,11 +227,7 @@ export default function Banner() {
   };
 
   return (
-    <Box
-      width={"100vw"}
-      margin={"0 auto"}
-      backgroundColor={"black"}
-    >
+    <Box width={"100vw"} margin={"0 auto"} backgroundColor={"black"}>
       <Slider {...settings} ref={sliderRef}>
         {Images.map((d) => (
           <Stack

@@ -12,6 +12,7 @@ import Form from "./parts/Form";
 import Image from "next/image";
 import banner1 from "@/public/assets/1.jpg";
 import SectionVideo from "./parts/SectionVideo";
+import Carausal from "./parts/Carausel";
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
@@ -31,7 +32,8 @@ export default function Home() {
         <Image src={banner1} alt="" fill objectFit="contain" sizes="100vw" />
       </Box>
       <Form />
-      <AboveFooter />
+      <Carausal />
+      {/* <AboveFooter /> */}
       <Footer />
     </Box>
   );
