@@ -3,25 +3,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "@/public/assets/a-random-logo.png";
+import img3 from "@/public/assets/a-random-logo3.png";
+import img4 from "@/public/assets/a-random-logo4.png";
 import Image from "next/image";
+import { Typography } from "@mui/material";
 
 const carausel = [
   { id: 0, img: img },
-  { id: 1, img: img },
-  { id: 2, img: img },
+  { id: 1, img: img3 },
+  { id: 2, img: img4 },
   { id: 3, img: img },
-  { id: 4, img: img },
-  { id: 5, img: img },
+  { id: 4, img: img3 },
+  { id: 5, img: img4 },
   { id: 6, img: img },
-  { id: 7, img: img },
-  { id: 8, img: img },
+  { id: 7, img: img3 },
+  { id: 8, img: img4 },
   { id: 9, img: img },
-  { id: 10, img: img },
-  { id: 11, img: img },
+  { id: 10, img: img3 },
+  { id: 11, img: img4 },
 ];
 
 var settings = {
-  dots: true,
+  dots: false,
+  arrows: false,
   infinite: true,
   speed: 2000,
   slidesToShow: 7,
@@ -31,8 +35,9 @@ var settings = {
   cssEase: "ease",
 };
 var settingsRight = {
-  dots: true,
+  dots: false,
   infinite: true,
+  arrows: false,
   speed: 2000,
   rtl: true,
   slidesToShow: 7,
@@ -44,12 +49,21 @@ var settingsRight = {
 
 export default function Carausal() {
   return (
-    <Box>
+    <Box padding={"20px 160px"}>
+      <Typography color={"white"} fontSize={"2.5rem"} margin={"15px 0"}>
+        Trusted by <span style={{ color: "limegreen" }}>the best</span>
+      </Typography>
       <Slider {...settings}>
         {carausel.map((el, i) => {
           return (
             <Box>
-              <Image width={200} height={200} src={el.img} alt="" />
+              <Image
+                width={100}
+                height={100}
+                src={el.img}
+                alt=""
+                style={{ filter: "grayscale(100%)" }}
+              />
             </Box>
           );
         })}
@@ -58,7 +72,13 @@ export default function Carausal() {
         {carausel.map((el, i) => {
           return (
             <Box>
-              <Image width={200} height={200} src={el.img} alt="" />
+              <Image
+                width={100}
+                height={100}
+                src={el.img}
+                style={{ filter: "grayscale(100%)" }}
+                alt=""
+              />
             </Box>
           );
         })}
