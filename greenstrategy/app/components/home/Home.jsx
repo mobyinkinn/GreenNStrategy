@@ -11,14 +11,20 @@ import Footer from "../footer/Footer";
 import Form from "./parts/Form";
 import Image from "next/image";
 import banner1 from "@/public/assets/1.jpg";
+import SectionVideo from "./parts/SectionVideo";
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
   return (
-    <Box backgroundColor={"black"} sx={{ overflowX: "hidden" }}>
+    <Box
+      backgroundColor={"black"}
+      sx={{ overflowX: "hidden" }}
+      className="background-texture"
+    >
       <Navbar showNav={showNav} />
       <Landing setShowNav={setShowNav} />
-      <Banner />
+      <SectionVideo/>
+      {/* <Banner /> */}
       {/* <ProgressBar /> */}
       <Services />
       <Box width={"100%"} height={"100vh"} position={"relative"}>
