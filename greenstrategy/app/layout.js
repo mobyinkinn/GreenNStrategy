@@ -21,8 +21,8 @@ const theme = createTheme({
 });
 
 const roboto = Roboto({
-  subsets: ["latin"], // Optional: specify subsets like 'latin', 'latin-ext', etc.
-  weight: ["400", "700"], // Optional: specify weights like '400', '700', etc.
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 const metadata = {

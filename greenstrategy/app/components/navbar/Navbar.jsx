@@ -10,9 +10,9 @@ import Image from "next/image";
 import { useState } from "react";
 import logoWhite from "@/public/assets/logoWhite.png"
 const navData = [
-  { name: "Services", route: "/Services" },
-  { name: "Contacts", route: "/Contacts" },
   { name: "About", route: "/About" },
+  { name: "Services", route: "/Services" },
+  { name: "Contact us", route: "/Contacts" },
 ];
 
 const translateOnLoad = keyframes`
