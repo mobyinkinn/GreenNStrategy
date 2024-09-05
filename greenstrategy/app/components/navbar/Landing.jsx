@@ -12,10 +12,22 @@ export default function Landing({ setShowNav }) {
   const animeRef = useRef();
 
   useGSAP(() => {
+    gsap.to(".bar", 1.5, {
+      delay: 0,
+      height: 0,
+      stagger: {
+        amount: 0.5,
+      },
+      ease: "power4.inOut",
+    });
+
     //calculation the width of the screen for the horizontal animation
     const innerWidth = window.innerWidth;
     // console.log(innerWidth);
-
+    gsap.from(animeRef.current, 0.4, {
+      y: innerWidth,
+      ease: "power4.inOut",
+    });
     // Resgistering the ScrollTrigger so that we can use it
     gsap.registerPlugin(ScrollTrigger);
 
@@ -50,80 +62,115 @@ export default function Landing({ setShowNav }) {
     // });
   });
   return (
-    <Stack maxWidth={"100%"}>
-      {/* <Stack backgroundColor={"black"} height={"100vh"}></Stack> */}
-      <Stack
-        backgroundColor={"black"}
-        height={"70vh"}
-        width={"100vw"}
-        sx={{
-          color: "white",
-          justifyContent: "end",
-          alignItems: "center",
-          // gap: "5px",
-        }}
-      >
-        <Stack width={"100%"}>
-          {/* <Image src={logo} alt="" ref={animeRef} fill objectFit="cover" /> */}
-          <Stack ref={animeRef} direction={"row"} justifyContent={"center"}>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "1.6rem",
-                  md: "2rem",
-                  lg: "10rem",
-                },
-                color: "#21d121",
-                fontWeight: "bold",
-                fontFamily: "popins",
-              }}
-            >
-              Green&nbsp;
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: "1.6rem",
-                  md: "2rem",
-                  lg: "10rem",
-                },
+    <Box>
+      <Stack direction={"row"} position={"absolute"} width={"100%"}>
+        <Box
+          backgroundColor={"#333"}
+          height={"100vh"}
+          width={"20%"}
+          className="bar"
+        ></Box>
+        <Box
+          backgroundColor={"#333"}
+          height={"100vh"}
+          width={"20%"}
+          className="bar"
+        ></Box>
+        <Box
+          backgroundColor={"#333"}
+          height={"100vh"}
+          width={"20%"}
+          className="bar"
+        ></Box>
+        <Box
+          backgroundColor={"#333"}
+          height={"100vh"}
+          width={"20%"}
+          className="bar"
+        ></Box>
+        <Box
+          backgroundColor={"#333"}
+          height={"100vh"}
+          width={"20%"}
+          className="bar"
+        ></Box>
+      </Stack>
+      <Stack maxWidth={"100%"}>
+        {/* <Stack backgroundColor={"black"} height={"100vh"}></Stack> */}
+        <Stack
+          backgroundColor={"black"}
+          height={"70vh"}
+          width={"100vw"}
+          sx={{
+            color: "white",
+            justifyContent: "end",
+            alignItems: "center",
+            // gap: "5px",
+          }}
+        >
+          <Stack width={"100%"}>
+            {/* <Image src={logo} alt="" ref={animeRef} fill objectFit="cover" /> */}
+            <Stack ref={animeRef} direction={"row"} justifyContent={"center"}>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "1.6rem",
+                    md: "2rem",
+                    lg: "10rem",
+                  },
+                  color: "#21d121",
+                  fontWeight: "bold",
+                  fontFamily: "popins",
+                }}
+              >
+                Green&nbsp;
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "1.6rem",
+                    md: "2rem",
+                    lg: "10rem",
+                  },
 
-                fontWeight: "bold",
-                fontFamily: "popins",
+                  fontWeight: "bold",
+                  fontFamily: "popins",
+                }}
+              >
+                & Strategy
+              </Typography>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Stack
+          justifyContent={"end"}
+          alignItems={"center"}
+          height={"30vh"}
+          onClick={() =>
+            window.scrollTo({
+              top: 610,
+              behavior: "smooth", // This enables the smooth scrolling effect
+            })
+          }
+        >
+          <Stack
+            alignItems={"end"}
+            height={"100px"}
+            width={"70px"}
+            borderRadius={6}
+            border={"1px solid #053726"}
+          >
+            <KeyboardDoubleArrowDownIcon
+              sx={{
+                color: "white",
+                fontSize: "75px",
+                paddingTop: "23px",
+                paddingLeft: "10px",
               }}
-            >
-              & Strategy
-            </Typography>
+            />
           </Stack>
         </Stack>
       </Stack>
-      <Stack
-      justifyContent={"end"} alignItems={"center"}
-      height={"30vh"}
-        onClick={() =>
-          window.scrollTo({
-            top: 610,
-            behavior: "smooth", // This enables the smooth scrolling effect
-          })
-        }
-      >
-        <Stack
-          alignItems={"end"}
-          height={"100px"}
-          width={"70px"}
-          borderRadius={6}
-          border={"1px solid #053726"}
-        >
-          <KeyboardDoubleArrowDownIcon
-            sx={{
-              color: "white",
-              fontSize: "75px",
-              paddingTop: "23px",
-              paddingLeft: "10px",
-            }}
-          />
-        </Stack>
-      </Stack>
-    </Stack>
+    </Box>
   );
 }
