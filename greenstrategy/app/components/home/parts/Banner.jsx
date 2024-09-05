@@ -220,12 +220,14 @@ export default function Banner() {
     },
     {
       id: 2,
+      head: "heading 2",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
       src: skin,
     },
     {
       id: 3,
+      head: "heading 3",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
       src: hair,
@@ -239,7 +241,7 @@ export default function Banner() {
   };
 
   return (
-    <Box width={"100vw"} margin={"0 auto"} backgroundColor={"black"}>
+    <Box width={"100vw"} margin={"70px auto"} backgroundColor={"black"}>
       <Slider {...settings} ref={sliderRef}>
         {Images.map((d) => (
           <Box
@@ -263,8 +265,17 @@ export default function Banner() {
                 sizes="50vw"
               />
             </Box>
-            <Box width={"50%"} display={"inline-block"} color={"#ddd"}>
-              {d.content}
+            <Box
+              width={"50%"}
+              height={"100%"}
+              display={"inline-block"}
+              color={"#ddd"}
+              padding={"50px"}
+              position={"relative"}
+              bottom={"40%"}
+            >
+              <Typography fontSize={"2.5rem"}>{d.head}</Typography>
+              <Typography fontSize={"1.2rem"}>{d.content}</Typography>
             </Box>
           </Box>
         ))}
