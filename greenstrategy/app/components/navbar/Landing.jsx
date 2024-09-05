@@ -24,9 +24,15 @@ export default function Landing({ setShowNav }) {
     //calculation the width of the screen for the horizontal animation
     const innerWidth = window.innerWidth;
     // console.log(innerWidth);
-    gsap.from(animeRef.current, 0.4, {
-      y: innerWidth,
+    gsap.from(".letter", 0.4, {
+      y: innerWidth / 2,
+      opacity: 0,
+      delay: 0,
       ease: "power4.inOut",
+      stagger: {
+        amount: 0.5,
+      },
+      duration: 0.5,
     });
     // Resgistering the ScrollTrigger so that we can use it
     gsap.registerPlugin(ScrollTrigger);
@@ -123,7 +129,12 @@ export default function Landing({ setShowNav }) {
                   fontFamily: "popins",
                 }}
               >
-                Green&nbsp;
+                <span className="letter">G</span>
+                <span className="letter">r</span>
+                <span className="letter">e</span>
+                <span className="letter">e</span>
+                <span className="letter">n</span>
+                &nbsp;
               </Typography>
               <Typography
                 sx={{
@@ -137,7 +148,16 @@ export default function Landing({ setShowNav }) {
                   fontFamily: "popins",
                 }}
               >
-                & Strategy
+                <span className="letter">&</span>
+                <span className="letter">&nbsp;</span>
+                <span className="letter">S</span>
+                <span className="letter">t</span>
+                <span className="letter">r</span>
+                <span className="letter">a</span>
+                <span className="letter">t</span>
+                <span className="letter">e</span>
+                <span className="letter">g</span>
+                <span className="letter">y</span>
               </Typography>
             </Stack>
           </Stack>

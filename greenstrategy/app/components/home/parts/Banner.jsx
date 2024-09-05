@@ -168,6 +168,7 @@ import banner3 from "@/public/assets/4.jpg";
 import baby from "@/public/assets/baby.png";
 import skin from "@/public/assets/skin-care.jpg";
 import hair from "@/public/assets/Hair.webp";
+import banner from "@/public/assets/3.png";
 
 export default function Banner() {
   const bannerRef = useRef();
@@ -213,24 +214,24 @@ export default function Banner() {
   const Images = [
     {
       id: 1,
-      head: "heading 1",
+      head: "Your best provider for data analysis and strategy in UAE",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
-      src: baby,
+        "We deliver the bullet proof strategy for your business success, driven by invalueable data and in depth research tailored specifically for your brand.",
+      src: banner,
     },
     {
       id: 2,
-      head: "heading 2",
+      head: "Market Research",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
-      src: skin,
+        "Campaign Creation, Lead Generation, Market Trends, AI Integration ,Competitor Analysis, Customer Experience, Customer Satisfaction, Product Testing, ROI Optimization ",
+      src: banner,
     },
     {
       id: 3,
-      head: "heading 3",
+      head: "Our Vision",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
-      src: hair,
+        "Our vision is to become the UAE's most trusted advisor, delivering top-tier Data Analysis and Strategic Insights through cutting-edge market research tools.",
+      src: banner,
     },
   ];
 
