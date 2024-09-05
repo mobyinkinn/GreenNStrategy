@@ -213,6 +213,7 @@ export default function Banner() {
   const Images = [
     {
       id: 1,
+      head: "heading 1",
       content:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
       src: baby,
@@ -245,13 +246,13 @@ export default function Banner() {
             display={"flex"}
             key={d.id}
             flexDirection={"row"}
-            height={"100vh"}
+            height={"70vh"}
             border={"none"}
           >
             <Box
               display={"inline-block"}
               position={"relative"}
-              height={"100vh"}
+              height={"70vh"}
               width={"50%"}
             >
               <Image
