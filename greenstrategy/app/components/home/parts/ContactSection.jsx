@@ -17,7 +17,7 @@ const ContactSection = () => {
       setPhone(newPhone);
     };
   return (
-    <Stack direction={"row"}>
+    <Stack direction={"row"} p={"50px 0px"}>
       <Stack width={"30%"} gap={"20px"} margin={"auto"}>
         <Stack gap={"5px"}>
           <Typography color="#0c9265" fontSize={"20px"}>
@@ -274,8 +274,11 @@ const ContactSection = () => {
           <Grid item xs={12} sx={{ textAlign: "center" }}>
             <Button
               variant="contained"
-              color="primary"
-              sx={{ borderRadius: "8px", padding: "0.5rem 2rem" }}
+              sx={{
+                borderRadius: "8px",
+                padding: "0.5rem 2rem",
+                bgcolor: "#0c9265",
+              }}
             >
               Submit
             </Button>

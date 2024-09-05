@@ -1,10 +1,10 @@
 "use client";
 
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import Slide from "@mui/material/Slide";
-
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 export default function ServiceCard({ name, data }) {
   const [showButton, setShowButton] = useState(false);
 
@@ -59,7 +59,13 @@ export default function ServiceCard({ name, data }) {
           position={"relative"}
         >
           <Slide direction="up" in={showButton} mountOnEnter unmountOnExit>
-            <Typography color={"limegreen"}>Learn more</Typography>
+            <Button
+            endIcon={<ArrowRightIcon sx={{pl:"0px",fontSize:"10px"}}/>}
+              color={"limegreen"}
+              sx={{ textTransform: "none", color: "#0c9265" }}
+            >
+              Learn more
+            </Button>
           </Slide>
         </Stack>
       </Stack>

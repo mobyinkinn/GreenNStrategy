@@ -101,7 +101,7 @@ export default function Footer() {
     <Stack
       direction={"row"}
       justifyContent={"space-around"}
-      p={"0 80px 80px 80px"}
+      p={"40px 80px 80px 80px"}
     >
       <Stack width={"60%"}>
         <Typography color="#0c9265" fontSize={"25px"}>

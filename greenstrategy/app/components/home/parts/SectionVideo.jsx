@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import React from 'react'
 const SectionVideo = () => {
   return (
-    <Stack direction={"row"} pt={5} justifyContent={"space-around"}>
+    <Stack direction={"row"} pb={5} justifyContent={"space-around"}>
       <Stack width={"60%"}>
         {/* <ReactPlayer
         url="@/public/assets/video.mp4"

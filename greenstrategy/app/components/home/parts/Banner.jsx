@@ -242,7 +242,7 @@ export default function Banner() {
   };
 
   return (
-    <Box width={"100vw"} margin={"70px auto"} backgroundColor={"black"}>
+    <Box width={"100vw"} margin={"70px 70px"} backgroundColor={"black"}>
       <Slider {...settings} ref={sliderRef}>
         {Images.map((d) => (
           <Box

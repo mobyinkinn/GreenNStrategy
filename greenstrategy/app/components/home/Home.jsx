@@ -25,13 +25,11 @@ export default function Home() {
     >
       <Navbar showNav={showNav} />
       <Landing setShowNav={setShowNav} />
-      <SectionVideo />
       <Banner />
+      <SectionVideo />
       {/* <ProgressBar /> */}
       <Services />
-      <Box width={"100%"} height={"100vh"} position={"relative"}>
-        <Image src={banner1} alt="" fill objectFit="contain" sizes="100vw" />
-      </Box>
+     
       <ContactSection/>
       {/* <Form /> */}
       <Carausal />

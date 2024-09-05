@@ -177,6 +177,7 @@ body {
   z-index: -1;
 } */
 body {
+  cursor: none;
   background-color: #0a0a0a; /* Base background color */
   background-image: url("/assets/texture.jpg"); /* Texture image */
   mix-blend-mode: difference; /* Blend mode to overlay the image with the background color */
@@ -222,4 +223,15 @@ body {
 .div-animated:hover::before {
   width: 98%;
   transition: all 0.3s ease-out;
+}
+/* components/CustomCursor.module.css */
+.cursor {
+  width: 20px; /* Adjust the size of the dot */
+  height: 20px;
+  background-color: green; /* Green color for the dot */
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none; /* Ensures the cursor does not interfere with clicking elements */
+  z-index: 9999; /* Ensures the cursor is above other elements */
+  transform: translate(-50%, -50%);
 }
