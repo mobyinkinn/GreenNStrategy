@@ -157,7 +157,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -165,6 +165,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import banner1 from "@/public/assets/2.jpg";
 import banner2 from "@/public/assets/3.jpg";
 import banner3 from "@/public/assets/4.jpg";
+import baby from "@/public/assets/baby.png";
+import skin from "@/public/assets/skin-care.jpg";
+import hair from "@/public/assets/Hair.webp";
 
 export default function Banner() {
   const bannerRef = useRef();
@@ -196,6 +199,8 @@ export default function Banner() {
     dots: false,
     infinite: true,
     slidesToShow: 1,
+    fade: true,
+    speed: 2000,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -208,15 +213,21 @@ export default function Banner() {
   const Images = [
     {
       id: 1,
-      src: banner1,
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
+      src: baby,
     },
     {
       id: 2,
-      src: banner2,
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
+      src: skin,
     },
     {
       id: 3,
-      src: banner3,
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quisquam velit magnam nisi ex laborum facilis corporis asperiores ipsam, animi atque assumenda nostrum quam praesentium numquam dolore consequatur. Voluptatum, sit?",
+      src: hair,
     },
   ];
 
@@ -230,21 +241,31 @@ export default function Banner() {
     <Box width={"100vw"} margin={"0 auto"} backgroundColor={"black"}>
       <Slider {...settings} ref={sliderRef}>
         {Images.map((d) => (
-          <Stack
+          <Box
+            display={"flex"}
             key={d.id}
-            width={"100vw"}
+            flexDirection={"row"}
             height={"100vh"}
-            position={"relative"}
             border={"none"}
           >
-            <Image
-              src={d.src}
-              alt={`Image ${d.id}`}
-              fill
-              objectFit={"contain"}
-              sizes="100vw"
-            />
-          </Stack>
+            <Box
+              display={"inline-block"}
+              position={"relative"}
+              height={"100vh"}
+              width={"50%"}
+            >
+              <Image
+                src={d.src}
+                alt={`Image ${d.id}`}
+                fill
+                objectFit={"cover"}
+                sizes="50vw"
+              />
+            </Box>
+            <Box width={"50%"} display={"inline-block"} color={"#ddd"}>
+              {d.content}
+            </Box>
+          </Box>
         ))}
       </Slider>
       <ProgressBar
