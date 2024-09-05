@@ -133,9 +133,34 @@ html {
 }
 /* Add this to globals.css or the specific CSS file */
 body {
-  background-color: #0a0a0a; /* Base background color */
+  background-color: #333; /* Base background color */
   background-image: url('/assets/texture.jpg'); /* Texture image */
-  mix-blend-mode: difference; /* Blend mode to overlay the image with the background color */
+  mix-blend-mode: lighten; /* Blend mode to overlay the image with the background color */
   background-size: contain; /* Cover the entire background */
   background-position: center; /* Center the image */
+}
+
+
+.text-stroke{
+    -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+
+.btn-animated {
+  cursor: pointer;
+  height: 55px;
+  width: 200px;
+  padding: 5px 15px;
+  background-color: black;
+  border: 1px solid #ddd;
+  color: #ddd;
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 0 0 #0c9265;
+  transition: ease-out 0.5s;
+}
+
+.btn-animated:hover {
+  box-shadow: inset 0 55px 0 0 #0c9265;
+  color: black;
 }

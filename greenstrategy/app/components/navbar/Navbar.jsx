@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
 import { useState } from "react";
-import logoWhite from "@/public/assets/logoWhite.png"
+import logoWhite from "@/public/assets/logoWhite2.png"
 const navData = [
   { name: "About", route: "/About" },
   { name: "Services", route: "/Services" },

@@ -50,16 +50,15 @@ export default function Landing({ setShowNav }) {
     // });
   });
   return (
-    <Stack position={"relative"}>
+    <Stack maxWidth={"100%"}>
       {/* <Stack backgroundColor={"black"} height={"100vh"}></Stack> */}
       <Stack
         backgroundColor={"black"}
-        height={"100vh"}
+        height={"70vh"}
         width={"100vw"}
-        maxWidth={"100%"}
         sx={{
           color: "white",
-          justifyContent: "center",
+          justifyContent: "end",
           alignItems: "center",
           // gap: "5px",
         }}
@@ -99,9 +98,8 @@ export default function Landing({ setShowNav }) {
         </Stack>
       </Stack>
       <Stack
-        bottom={0}
-        left={"50%"}
-        position={"absolute"}
+      justifyContent={"end"} alignItems={"center"}
+      height={"30vh"}
         onClick={() =>
           window.scrollTo({
             top: 610,
