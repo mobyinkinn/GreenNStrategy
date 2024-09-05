@@ -6,8 +6,8 @@ export const serviceData = [
   },
   {
     id: 1,
-    name: "Data Analysis and Strategy",
-    data: "Stay ahead of your competitors with our market research expertise. We enhance your decision-making through profound data insights, leveraging the latest trends in market research and data analysis.",
+    name: "Data Analysis",
+    data: "Stay ahead of your competitors with our market research expertise. ",
   },
   {
     id: 2,
